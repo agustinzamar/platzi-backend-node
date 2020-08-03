@@ -4,13 +4,16 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "nodemon index DEBUG=app:*",
-        "start": "node index NODE_ENV=production"
+        "dev": "set DEBUG=app:* && set NODE_ENV=development && nodemon index.js",
+        "start": "set NODE_ENV=production && nodemon index.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@hapi/boom": "^9.1.0",
+        "@hapi/joi": "^17.1.1",
+        "cors": "^2.8.5",
         "dotenv": "^8.2.0",
         "express": "^4.17.1"
     },
