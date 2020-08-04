@@ -42,4 +42,4 @@ class MoviesService {
     }
 }
 
-module.exports = { MoviesService }
+module.exports = MoviesService

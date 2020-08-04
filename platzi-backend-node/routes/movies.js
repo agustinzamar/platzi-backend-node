@@ -1,5 +1,5 @@
 const express = require('express')
-const { MoviesService } = require('../services/movies.js')
+const MoviesService = require('../services/movies')
 const {
     movieIdSchema,
     createMovieSchema,
