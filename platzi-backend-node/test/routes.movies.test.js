@@ -27,4 +27,28 @@ describe('routes - movies', function () {
             })
         })
     })
+
+    describe('GET /movies/:movieId', function () {
+        it('should respond with status 200', function (done) {
+            request
+                .get('/api/movies/123456789123456789123456')
+                .expect(200, done)
+        })
+
+        it('should respond with the list of movies', function (done) {
+            request
+                .get('/api/movies/123456789123456789123456')
+                .end((err, res) => {
+                    const result = res.body
+                    const expect = {
+                        data: moviesMock[0],
+                        message: 'movie retrieved',
+                    }
+
+                    assert.deepEqual(result, expect)
+
+                    done()
+                })
+        })
+    })
 })

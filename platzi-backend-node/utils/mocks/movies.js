@@ -166,6 +166,10 @@ class MoviesServiceMock {
     async createMovie() {
         return Promise.resolve(moviesMock[0])
     }
+
+    async getMovie() {
+        return Promise.resolve(moviesMock[0])
+    }
 }
 
 module.exports = {

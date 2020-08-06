@@ -32,7 +32,7 @@ function moviesApi(app) {
     })
 
     router.get(
-        '/:movieId/',
+        '/:movieId',
         validationHandler({ movieId: movieIdSchema }, 'params'),
         async function (req, res, next) {
             const { movieId } = req.params
